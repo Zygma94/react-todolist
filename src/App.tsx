@@ -1,24 +1,51 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { TodoList } from './components/TodoList';
+import { AddTodoForm } from './components/AddTodoForm';
+import { Routes, Route, NavLink } from 'react-router-dom';
+
+
+const initialTodos: TodoItemProp[] = [
+  {
+    text: 'Sacar la basura',
+    complete: false,
+  },
+  {
+    text: 'Desarrollar aplicación',
+    complete: true,
+  },
+];
 
 function App() {
+  const [todos, setTodos] = useState(initialTodos);
+
+  const toggleTodo = (selectedTodo: TodoItemProp) => {
+    const newTodos = todos.map((todo) => {
+      if (todo === selectedTodo) {
+        return {
+          ...todo,
+          complete: !todo.complete,
+        };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  const addTodo: AddTodo = (text: string) => {
+    const newTodo = { text, complete: false };
+    setTodos([...todos, newTodo]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <header className='titulo'>
+      <b>Lista de tareas</b>
+    </header>
+    <ul>
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <AddTodoForm addTodo={addTodo} />
+    </ul>
     </div>
   );
 }
