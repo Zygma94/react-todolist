@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 
 
 type FormProp = {
-    addTodo: AddTodo;
+    editTodo: EditTodo;
+    todo: TodoItem;
+    toggleEditModeHandler: ToggleTodo;
 }
 
 
-export const AddTodoForm: React.FC<FormProp> = ({ addTodo }) => {
-    const [text, setText] = useState('');
+export const EditTodoForm: React.FC<FormProp> = ({ editTodo, todo, toggleEditModeHandler }) => {
+    const [text, setText] = useState(todo.text);
 
     const onGuardar = () => {
         if (text.length > 0) {
-            addTodo(text);
+            editTodo({...todo, text});
             setText('');
         }
     };
@@ -26,7 +28,8 @@ export const AddTodoForm: React.FC<FormProp> = ({ addTodo }) => {
                     }}
             />
             <button type="button" className="boton-agregar"
-                onClick={onGuardar}>Agregar Tarea</button>
+                onClick={onGuardar}>Editar Tarea</button>
+                <button className='boton-cancelar' onClick={toggleEditModeHandler}>Cancelar edición</button>
         </form>
     );
 };

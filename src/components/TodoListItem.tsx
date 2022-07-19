@@ -1,13 +1,13 @@
 import React from 'react';
-import { BsFillTrashFill, BsFillPencilFill } from "react-icons/bs";
 
 
 type ItemProp = {
-    todo: TodoItemProp;
+    todo: TodoItem;
     toggleTodo: ToggleTodo;
+    toggleEditModeHandler: ToggleTodo;
 }
 
-export const TodoListItem: React.FC<ItemProp> = ({ todo, toggleTodo }) => {
+export const TodoListItem: React.FC<ItemProp> = ({ todo, toggleTodo, toggleEditModeHandler }) => {
     return (
         <li>
             <div style={{ textDecoration: todo.complete ? 'line-through' : undefined }}>
@@ -16,6 +16,7 @@ export const TodoListItem: React.FC<ItemProp> = ({ todo, toggleTodo }) => {
                 }
                 } />{' '}
                 {todo.text}
+                <button className='Editar' onClick={toggleEditModeHandler}>Editar</button>
             </div>
         </li>
     );
