@@ -28,8 +28,8 @@ export const EditTodoForm: React.FC<FormProp> = ({ editTodo, todo, toggleEditMod
                     }}
             />
             <button type="button" className="boton-editar"
-                onClick={onGuardar}><b>Editar Tarea</b></button>
-            <button className='boton-cancelar' onClick={toggleEditModeHandler}><b>Cancelar edición</b></button>
+                onClick={onGuardar}><b>Aceptar</b></button>
+            <button className='boton-cancelar' onClick={toggleEditModeHandler}><b>Cancelar</b></button>
         </form>
     );
 };

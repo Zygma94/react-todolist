@@ -30,6 +30,9 @@ form {
   max-width: auto;
   border-radius: 10px;
   margin-top: 20px;
+  margin-left: 60vh;
+  margin-right: 60vh;
+  box-shadow: 12px 11px rgba(34, 80, 4, 0.3);
 }
 
 .Editar,.boton-cancelar {
