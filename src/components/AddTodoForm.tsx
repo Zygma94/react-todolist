@@ -26,7 +26,7 @@ export const AddTodoForm: React.FC<FormProp> = ({ addTodo }) => {
                     }}
             />
             <button type="button" className="boton-agregar"
-                onClick={onGuardar}>Agregar Tarea</button>
+                onClick={onGuardar}><b>Agregar Tarea</b></button>
         </form>
     );
 };

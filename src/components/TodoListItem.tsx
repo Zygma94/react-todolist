@@ -16,7 +16,7 @@ export const TodoListItem: React.FC<ItemProp> = ({ todo, toggleTodo, toggleEditM
                 }
                 } />{' '}
                 {todo.text}
-                <button className='Editar' onClick={toggleEditModeHandler}>Editar</button>
+                <button className='Editar' onClick={toggleEditModeHandler}><b>Editar</b></button>
             </div>
         </li>
     );

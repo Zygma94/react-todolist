@@ -5,6 +5,7 @@ import { AddTodoForm } from './components/AddTodoForm';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 
+
 const initialTodos: TodoItem[] = [
   {
     text: 'Sacar la basura',
@@ -54,9 +55,9 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='area-app'>
       <header className='titulo'>
-        <b>Lista de tareas</b>
+        <b>LISTA DE TAREAS</b>
       </header>
       <ul>
         <TodoList todos={todos} toggleTodo={toggleTodo} editTodo={editTodo} />

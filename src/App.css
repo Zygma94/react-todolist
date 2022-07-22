@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+:root {
+  --cafe-au-lait: #a57548ff;
+  --light-orange: #fcd7adff;
+  --mellow-apricot: #f6c28bff;
+  --blue-munsell: #5296a5ff;
+  --sky-blue-crayola: #82ddf0ff;
+}
+
+
 .App {
   text-align: center;
 }
@@ -7,32 +19,60 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.boton-agregar {
+  background-color: var(--mellow-apricot);
+  font-family: 'Permanent Marker', cursive;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form {
+  margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.area-app {
+  background-color: var(--light-orange);
+  max-width: 70%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Editar,.boton-cancelar {
+  background-color: skyblue;
+  font-family: 'Permanent Marker', cursive;
+  margin-left: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.boton-editar {
+  background-color: skyblue;
+  font-family: 'Permanent Marker', cursive;
+  margin-left: 30px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.titulo {
+  background-color: var(--cafe-au-lait);
+  text-align: center;
+  border-bottom: 40px;
+  font-size: 35px;
+  font-family: 'Rampart One', cursive;
+
+}
+
+form>input {
+  background-color: lavender;
+  font-family: 'Permanent Marker';
+  font-size: 18px;
+}
+
+ul {
+  font-size: 20px;
+  font-family: 'Permanent Marker';
+
 }
