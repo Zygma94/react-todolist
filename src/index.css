@@ -16,6 +16,7 @@ body {
   background-color: var(--sky-blue-crayola);
   font-family: 'Indie Flower', cursive;
   size: 30px;
+  border-radius: 10px;
 }
 
 code {

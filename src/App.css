@@ -10,32 +10,26 @@
 }
 
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-
 .boton-agregar {
   background-color: var(--mellow-apricot);
   font-family: 'Permanent Marker', cursive;
   margin-left: 30px;
   margin-bottom: 50px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 form {
   margin-top: 50px;
+  text-align: center;
 }
 
 .area-app {
   background-color: var(--light-orange);
-  max-width: 70%;
+  width: 80vh;
+  max-width: auto;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .Editar,.boton-cancelar {
@@ -45,6 +39,7 @@ form {
   margin-top: 3px;
   margin-bottom: 3px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .boton-editar {
@@ -54,6 +49,7 @@ form {
   margin-top: 3px;
   margin-bottom: 3px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .titulo {
@@ -62,6 +58,8 @@ form {
   border-bottom: 40px;
   font-size: 35px;
   font-family: 'Rampart One', cursive;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
 }
 
@@ -69,10 +67,17 @@ form>input {
   background-color: lavender;
   font-family: 'Permanent Marker';
   font-size: 18px;
+  width: 40vh;
+  border-radius: 10px;
+}
+
+form>.input-tarea {
+  width: 30%;
+  text-align: start;
+  height: auto;
 }
 
 ul {
   font-size: 20px;
   font-family: 'Permanent Marker';
-
 }
