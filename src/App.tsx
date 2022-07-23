@@ -59,10 +59,31 @@ function App() {
       <header className='titulo'>
         <b>LISTA DE TAREAS</b>
       </header>
-      <ul>
-        <TodoList todos={todos} toggleTodo={toggleTodo} editTodo={editTodo} />
-        <AddTodoForm addTodo={addTodo} />
-      </ul>
+      <main>
+        <Routes>
+          <Route path='' element={
+            <ul>
+              <TodoList todos={todos} toggleTodo={toggleTodo} editTodo={editTodo} />
+              <AddTodoForm addTodo={addTodo} />
+            </ul>
+          } />
+          <Route path='/completadas' element={
+            <ul>
+              <TodoList todos={todos.filter((todo)=>todo.complete)} toggleTodo={toggleTodo} editTodo={editTodo} />
+              <AddTodoForm addTodo={addTodo} />
+            </ul>
+          } />
+          <Route path='/en-progreso' element={
+            <ul>
+              <TodoList todos={todos.filter((todo)=>!todo.complete)} toggleTodo={toggleTodo} editTodo={editTodo} />
+              <AddTodoForm addTodo={addTodo} />
+            </ul>
+          } />
+        </Routes>
+        <NavLink to='' className='nav-link'>Todas</NavLink>
+        <NavLink to='/completadas' className='nav-link'>Completadas</NavLink>
+        <NavLink to='/en-progreso' className='nav-link'>En progreso</NavLink>
+      </main>
     </div>
   );
 }
