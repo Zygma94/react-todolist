@@ -35,7 +35,8 @@ form {
   box-shadow: 12px 11px rgba(34, 80, 4, 0.3);
 }
 
-.Editar,.boton-cancelar {
+.Editar,
+.boton-cancelar {
   background-color: skyblue;
   font-family: 'Permanent Marker', cursive;
   margin-left: 20px;
@@ -83,4 +84,20 @@ form>.input-tarea {
 ul {
   font-size: 20px;
   font-family: 'Permanent Marker';
+}
+
+.nav-link {
+  background-color: var(--mellow-apricot);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+  margin-left: 8%;
+  width: 150px;
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+  border: black 2px solid;
+  text-align: center;
+  display: inline-block;
 }
